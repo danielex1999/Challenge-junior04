@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--Light-grey);
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  width: 650px;
+  height: 450px;
+  background: white;
+  border-radius: 30px 30px 120px 30px;
+}
+
+.age-calculator {
+  height: 30%;
+  padding: 30px 20px 30px 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+.age-calculator p {
+  color: var(--Smokey-grey);
+  font-size: 14px;
+}
+.age-calculator div {
+  margin-top: 6px;
+  margin-left: 25px;
+}
+input {
+  margin-top: 5px;
+  height: 40px;
+  width: 120px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid var(--Light-grey);
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  background: none;
+  cursor: pointer;
+}
+
+.is-required {
+  color: var(--Light-red) !important;
+  margin-top: 5px;
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  font-style: italic !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input:hover {
+  border: 1px solid var(--Purple);
+}
+
+.line-calculator {
+  border: 1px solid var(--Light-grey);
+  width: 80%;
+  margin-left: 40px;
+}
+.circle-calculator {
+  position: absolute;
+  right: 55px;
+  top: -35px;
+  background: var(--Purple);
+  border: 50%;
+  width: 11%;
+  height: 22%;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.circle-calculator img {
+  width: 45%;
+}
+
+.circle-calculator:hover {
+  background: var(--Off-black);
+}
+
+.age-result {
+  position: relative;
+  height: 70%;
+}
+.age-result div {
+  line-height: 1;
+}
+.resultados {
+  padding-top: 40px;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.resultados div {
+  display: flex;
+  flex-direction: row;
+}
+.result-empty {
+  color: var(--Purple);
+  font-weight: 800;
+  font-style: italic;
+  font-size: 70px;
+}
+.subtitle-result {
+  font-weight: 800;
+  margin-left: 10px;
+  font-style: italic;
+  font-size: 70px;
+}
+
+/*Formato movil*/
+@media screen and (max-width: 375px) {
+  section {
+    width: 90%;
+    height: 70%;
+    border-radius: 20px 20px 100px 20px;
+  }
+  .age-calculator {
+    padding: 35px 0 60px 0;
+    width: 80%;
+    margin-left: 8%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .age-calculator p {
+    color: var(--Smokey-grey);
+    font-size: 14px;
+  }
+  .age-calculator div {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  input {
+    margin-top: 10px;
+    height: 40px;
+    width: 90px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid var(--Light-grey);
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background: none;
+    cursor: pointer;
+  }
+  .is-required {
+    color: var(--Light-red) !important;
+    margin-top: 5px;
+    height: 10px;
+    font-size: 7px !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+  input:hover {
+    border: 1px solid var(--Purple);
+  }
+  .line-calculator {
+    border: 1px solid var(--Light-grey);
+    width: 80%;
+    margin-left: 40px;
+  }
+  .circle-calculator {
+    position: absolute;
+    right: 130px;
+    top: -35px;
+    background: var(--Purple);
+    border: 50%;
+    width: 20%;
+    height: 18%;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    border: none;
+  }
+  .circle-calculator img {
+    width: 45%;
+  }
+  .circle-calculator:hover {
+    background: var(--Off-black);
+  }
+  .age-result {
+    position: relative;
+    height: 70%;
+  }
+  .result-empty{
+    font-size: 50px;
+  }
+  .subtitle-result{
+    font-size: 50px;
+  }
+  .resultados {
+    padding-top: 70px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+}

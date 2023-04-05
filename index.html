@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+
+<body>
+  <section>
+    <div class="age-calculator">
+      <div class="day-option" id="calculator-format">
+        <p id="name-day">DAY</p>
+        <input id="data-day" type="number" placeholder="DD" onclick="validacion_general()">
+        <p class="is-required" id="message-error-day"></p>
+      </div>
+      <div class="month-option" id="calculator-format">
+        <p id="name-month">MONTH</p>
+        <input id="data-month" type="number" placeholder="MM" onclick="validacion_general()">
+        <p class="is-required" id="message-error-month"></p>
+      </div>
+      <div class="year-option" id="calculator-format">
+        <p id="name-year">YEAR</p>
+        <input id="data-year" type="number" placeholder="YYYY" onclick="validacion_general()">
+        <p class="is-required" id="message-error-year"></p>
+      </div>
+    </div>
+    <hr class="line-calculator">
+    <div class="age-result">
+      <button type="submit" class="circle-calculator" onclick="calculation()">
+        <img  src="assets/images/icon-arrow.svg" alt="icon">
+      </button>
+      <div class="resultados">
+        <div class="years">
+          <p class="result-empty" id="result-year">--</p>
+          <p class="subtitle-result">years</p>
+        </div>
+        <div class="months">
+          <p class="result-empty" id="result-month">--</p>
+          <p class="subtitle-result">months</p>
+        </div>
+        <div class="days">
+          <p class="result-empty" id="result-days">--</p>
+          <p class="subtitle-result">days</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="js/index.js"></script>
+</html>
