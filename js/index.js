@@ -85,12 +85,9 @@ function calculation() {
     var m = m2 - m1.value;
     var y = y2 - y1.value;
 
-    console.log(y, m, d);
 
     if ((d <= 0 || m <= 0 || y <= 0)) {
-        console.log("cagaste");
-    }else if (d1.value == "" || m1.value == "" || y1.value == "") {
-        console.log("cagaste");
+    } else if (d1.value == "" || m1.value == "" || y1.value == "") {
     } else {
         document.getElementById("result-year").innerHTML = y;
         document.getElementById("result-month").innerHTML = m;
